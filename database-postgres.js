@@ -21,11 +21,14 @@ export class DatabasePostgres {
 
     }
 
-    update(id, video) {
+    async update(id, video) {
+        const { title, description, duration } = video
+
+        await sql`UPDATE videos SET title = ${title}, description = ${description}, duration = ${duration} WHERE id = ${id}`;
 
     }
 
-    delete(id) {
-
+    async delete(id) {
+        await sql`delete from videos where id = ${id}`
     }
 }

@@ -31,12 +31,12 @@ server.get('/videos', async (request, response) => {
     return videos
 })
 
-server.put('/videos/:id', (request, response) => {
+server.put('/videos/:id', async (request, response) => {
     const videoId = request.params.id
 
     const { title, description, duration } = request.body
 
-    database.update(videoId, {
+    await database.update(videoId, {
         title,
         description,
         duration

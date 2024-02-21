@@ -12,18 +12,18 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3333/videos?search=node
+GET http://localhost:3333/videos
 
 
 ###
 
-PUT http://localhost:3333/videos/a8ded4c7-79e8-40d1-8045-67425d05892a
+PUT http://localhost:3333/videos/2e50e204-66fc-47f1-8257-b2abfba97836
 Content-Type: application/json
 
 {
-    "title": "Video 04",
-    "description": "Quadri Video",
-    "duration": 140
+    "title": "React video",
+    "description": "React video",
+    "duration": 120
 }
 
 ###
@@ -31,4 +31,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3333/videos/a8ded4c7-79e8-40d1-8045-67425d05892a
+DELETE http://localhost:3333/videos/2e50e204-66fc-47f1-8257-b2abfba97836
