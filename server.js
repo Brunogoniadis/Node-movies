@@ -1,6 +1,5 @@
 import { fastify } from 'fastify'
-/* import { DatabaseMemory } from './database-memory.js'
- */
+
 import { DatabasePostgres } from './database-postgres.js'
 
 
@@ -52,5 +51,6 @@ server.delete('/videos/:id', (request, response) => {
 })
 
 server.listen({
+    host: '0.0.0.0',
     port: process.env.PORT ?? 3333,
 })
